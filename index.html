@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<title>智慧医疗-首页</title>
+<style>
+.smooth { 
+/*	-webkit-transition-duration:300ms*/
+}
+body,html,span,div,p,input,ul,li,button ,table,tr,td{
+	padding: 0;
+	margin: 0;
+}
+.menu{
+	font-size:28px;
+	font-weight:bold;
+	color:#ffffff;
+	text-align:center;
+	line-height:46px;
+}
+#content div{
+	width: 220px;
+	height: 220px;
+    background-color: #848484;
+    position: absolute;;
+    top: 0;
+}
+</style>
+</head>
+
+<body style="background:url(images/bg.jpg) no-repeat; width:1280px; height:720px; overflow:hidden;position:relative;">
+<!-- loading -->	
+<div id="loadingDiv" class="smooth" style="position:absolute; top:320px; left:600px; width:70px; height:70px; z-index:10; visibility:hidden;">
+	<img src="./images/loading.gif" style="position:absolute; top:0px; left:0px;background: transparent;" />
+</div>
+<!-- logo -->
+<div style="position:absolute; top:0px; left:0px; width:1280px; height:100px;">
+	<img id="logo" src="images/logo.png" width="227" height="52" style="position:absolute; top:38px; left:64px;" />
+	<!-- <img id="service_tel" src="images/service_tel.png" width="179" height="19" style="position:absolute; top:58px; left:1038px;" /> -->
+</div>
+<div class="title" style="    position: absolute; top: 68px; left: 0; width: 1280px;
+    text-align: center;"><img src="images/title_index.png" alt=""></div>
+<!-- 内容框 -->
+<div id="content" style="position:absolute; top:160px; left:58px; width:1218px; height:470px;">
+	<div class="smooth" style="position: absolute; top: 0px; left: 0px; width: 220px; height: 456px; background-image: url(images/indexPic_00.png); "></div> 
+	<div class="smooth" style="position: absolute; top: 0px; left: 236px; width: 456px; height: 220px;background-image: url(images/indexPic_01.png); "></div> 
+	<div class="smooth" style="position: absolute; top: 0px; left: 708px; width: 220px; height: 456px; background-image: url(images/indexPic_02.png);"></div> 
+	<div class="smooth" style="position: absolute; top: 0px; left: 944px; width: 220px; height: 456px;background-image: url(images/indexPic_03.png); "></div> 
+	<div class="smooth" style="position: absolute; top: 236px; left: 236px; width: 220px; height: 220px;background-image: url(images/indexPic_11.png); "></div> 	
+	<div class="smooth" style="position: absolute; top: 236px; left: 472px; width: 220px; height: 220px; background-image: url(images/indexPic_12.png);"></div> 
+</div>
+
+<!-- focus框 -->
+<div style="position:absolute; top:160px; left:0px; width:1280px; height:470px;">
+	<div id="content_focus" class="smooth" style="position:absolute; top:-86px; left:-30px; width:396px; height:632px; z-index:5; opacity:0;visibility: hidden;">
+		<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+			<tr>
+				<td width="100" height="100" style="background:url(images/focus_lt.png); background-repeat:no-repeat;"></td>
+				<td style="background:url(images/focus_t.png);background-repeat:repeat-x;"></td>
+				<td width="100" style="background:url(images/focus_rt.png);background-repeat:no-repeat;"></td>
+			</tr>
+			<tr>
+				<td style="background:url(images/focus_l.png);background-repeat:repeat-y;"></td>
+				<td>&nbsp;</td>
+				<td style="background:url(images/focus_r.png);background-repeat:repeat-y;"></td>
+		
+			</tr>
+			<tr>
+				<td width="100" height="100" style="background:url(images/focus_lb.png);background-repeat:no-repeat;"></td>
+				<td style="background:url(images/focus_b.png);background-repeat:repeat-x;"></td>
+				<td style="background:url(images/focus_rb.png);background-repeat:no-repeat;"></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="bottom" style="    position: absolute; bottom: 0; color: #FFF; width: 100%; text-align: right; padding-bottom: 58px;">
+	<span style="    text-align: right; padding-right: 58px; padding-left: 56px; background: url(images/diretion_lr.png) no-repeat left center;">方向选择</span>
+</div>
+</body>
+<script type="text/javascript" src="js/keyEvent.js"></script>
+<script type="text/javascript" src="js/lib.js"></script>
+<script type="text/javascript" src="js/param.js"></script>
+<script type="text/javascript" src="js/showList.js"></script>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/showTips.js"></script>
+ <script type="text/javascript" src="js/index.js"></script> 
+<script>
+	
+</script>
+</html>
