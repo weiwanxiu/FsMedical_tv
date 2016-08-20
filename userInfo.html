@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<title>智慧医疗-首页</title>
+<style>
+.smooth { 
+	-webkit-transition-duration:300ms
+}
+body,html,span,div,p,input,ul,li,button{
+	padding: 0;
+	margin: 0;
+}
+.menu{
+	font-size:28px;
+	font-weight:bold;
+	color:#ffffff;
+	text-align:center;
+	line-height:46px;
+}
+
+</style>
+</head>
+
+<body style="background:url(images/bg.jpg) no-repeat; width:1280px; height:720px; overflow:hidden;position:relative;">
+<!-- loading -->	
+<div id="loadingDiv" class="smooth" style="position:absolute; top:320px; left:600px; width:70px; height:70px; z-index:10; visibility:hidden;">
+	<img src="./images/loading.gif" style="position:absolute; top:0px; left:0px;background: transparent;" />
+</div>
+<!-- logo -->
+<div style="position:absolute; top:0px; left:0px; width:1280px; height:100px;">
+	<img id="logo" src="images/logo.png" width="227" height="52" style="position:absolute; top:38px; left:64px;" />
+</div>
+<div class="title" style="    position: absolute; top: 68px; left: 0; width: 1280px;
+    text-align: center;"><img src="images/title_grsj.png" alt=""></div>
+<!-- 内容框 -->
+<div id="userId" style="    position: absolute; top: 100px; left: 58px; color: #FFF; font-size: 36px;"></div>
+<div id="content" style="position:absolute; top:160px; left:58px; width:1218px; height:470px;">
+	<div class="smooth" style="position: absolute; top: 0px; left: 0px; width: 220px; height: 456px; background-image: url(images/userPic_00.png); "></div> 
+	<div class="smooth" style="position: absolute; top: 0px; left: 236px; width: 456px; height: 220px;background-image: url(images/userPic_01.png); "></div> 
+	<div class="smooth" style="position: absolute; top: 0px; left: 708px; width: 220px; height: 456px; background-image: url(images/userPic_02.png);"></div> 
+	<div class="smooth" style="position: absolute; top: 0px; left: 944px; width: 220px; height: 220px;background-image: url(images/userPic_03.png); "></div> 
+	<div class="smooth" style="position: absolute; top: 236px; left: 236px; width: 220px; height: 220px;background-image: url(images/userPic_11.png); "></div> 	
+	<div class="smooth" style="position: absolute; top: 236px; left: 472px; width: 220px; height: 220px; background-image: url(images/userPic_12.png);"></div>
+	<div class="smooth" style="position: absolute; top: 236px; left: 944px; width: 220px; height: 220px; background-image: url(images/userPic_12.png);"></div> 
+	<!-- 姓名：张小妹<br>性别：女<br> 年龄：25<br>体重：76kg<br>身高176cm<br>病史：糖尿病 -->
+	<div id="userInfo" class="smooth" style="position: absolute; top: 0px; left: 0px; width: 220px; height: 456px; padding-top: 190px; padding-left: 22px; color: #FFF; line-height: 40px; font-size: 26px;"></div>
+	<!-- focus框 -->
+	<div id="content_focus" class="smooth" style="position: absolute;top: -3px;left: -3px;width: 214px;height: 450px;z-index: 5;opacity: 1;visibility: visible;border: 6px solid #ABE430;border-radius: 6px;"></div>
+</div>
+
+
+
+<div class="bottom" style="    position: absolute; bottom: 0; color: #FFF; width: 100%; text-align: right; padding-bottom: 58px;">
+	<span style="    text-align: right; padding-right: 58px; padding-left: 56px; background: url(images/diretion_lr.png) no-repeat left center;">方向选择</span>
+</div>
+</body>
+<script type="text/javascript" src="js/keyEvent.js"></script>
+<script type="text/javascript" src="js/lib.js"></script>
+<script type="text/javascript" src="js/param.js"></script>
+<script type="text/javascript" src="js/showList.js"></script>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/showTips.js"></script>
+ <script type="text/javascript" src="js/userInfo.js"></script> 
+<script>
+	
+</script>
+</html>

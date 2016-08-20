@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<title>添加用户</title>
+<style>
+body,html{
+	padding: 0;
+	margin: 0;
+}
+.smooth { -webkit-transition-duration:300ms; }
+
+.word-item{
+	display: inline-block;
+    font-size: 22px;
+    color: #ffffff;
+    width: 58px;
+    height: 58px;
+    line-height: 58px;
+    text-align: center;
+}
+#wordFocus{
+	position: absolute;
+	top: 110px;
+	left: 63px;
+	width: 55px;
+	height: 55px;
+	border: 3px #ABE430 solid;
+	border-radius: 6px;
+	display: none;
+}
+.wordActionBt{
+	display: inline-block;
+    width: 76px;
+    height: 40px;
+    line-height: 40px;
+    color: #ffffff;
+    background-color: #0c78ec;
+    border-radius: 6px;
+    text-align: center;
+    margin: 0px 5px;
+    font-size: 20px;
+}
+#wordActionFocus{
+	position: absolute;
+	top: 110px;
+	left: 63px;
+	width: 55px;
+	height: 55px;
+	border: 3px #ABE430 solid;
+	border-radius: 9px;
+	display: none;
+}
+.inputName{
+	float: left;
+	width: 100px;
+	text-align: right;
+	color: #fff;
+	font-size: 26px;
+	padding-right: 20px;
+	height: 40px;
+	line-height: 40px;
+}
+.inputItem{
+	float: left;
+	line-height: 40px;
+	height: 40px;
+	background-color: #ffffff;
+	text-align: left;
+	width: 500px;
+	padding-left: 10px;
+	border-radius: 6px;
+	font-size: 24px;
+}
+.inputSubmit{
+	width: 136px;
+	height: 40px;
+	line-height: 40px;
+	color: #ffffff;
+	background-color:  #0c78ec;
+	border-radius: 10px;
+	text-align: center;
+	float: left;
+	font-size: 24px;
+}
+#inputTips{
+	font-size: 20px;
+    float: left;
+    color: #ff7800;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    display: none;
+}
+#inputFocus{
+	position: absolute;
+    top: -4px;
+    left: 116px;
+    width: 510px;
+    height: 40px;
+    border: 4px #ABE430 solid;
+    border-radius: 10px;
+	display: none;
+}
+#inputSelect{
+	position: absolute;
+    top: -4px;
+    left: 116px;
+    width: 510px;
+    height: 40px;
+    border: 4px #FF871D solid;
+    border-radius: 10px;
+    display: none;
+}
+</style>
+</head>
+
+<body style="background:url(images/bg.jpg) no-repeat; width:1280px; height:720px; overflow:hidden;position:relative;">
+<!-- loading -->	
+<div id="loadingDiv" class="smooth" style="position:absolute; top:320px; left:600px; width:70px; height:70px; z-index:10; visibility:hidden;">
+	<img src="./images/loading.gif" style="position:absolute; top:0px; left:0px;background: transparent;" />
+</div>
+
+<!-- 键盘框 -->
+<div id="wordBoxWrapper" class="smooth" style="position:absolute; top:0px; left:-418px; width:418px; height:720px;z-index:1;">
+	<!-- 键盘框背景 -->
+	<div style="position:absolute; top:0px; left:0px; width:418px; height:720px;background-color:#000000;opacity:0.3;"></div>
+	<div style="position:absolute;top: 110px;left: 63px;width: 355px;color: #ffffff;" id="wordBox"><!-- <div class="word-item">A</div> --></div>
+	<div id="wordFocus" class="smooth"></div>
+	<div style="position:absolute;top:465px;left:63px;width:355px;text-align:center;"><div style="" class="wordActionBt">删除</div><div style="" class="wordActionBt">清空</div><div style="width:120px;" class="wordActionBt">完成输入</div><div id="wordActionFocus" class="smooth"></div></div>
+</div>
+
+<div style="position:absolute;top:70px;left:700px;font-size:30px;color:#ffffff;">添加用户</div>
+
+<div style="position:absolute;top:233px;left:420px;">
+	<div style="height:65px;">
+		<div class="inputName">ID</div><div id="inputId" class="inputItem"><!-- 343 --></div>
+	</div>
+	<div style="height:65px;">
+		<div class="inputName">密码</div><div id="inputPsw" class="inputItem"><!-- *** --></div>
+	</div>
+	<div style="height:65px;">
+		<div class="inputName"></div><div id="inputSubmit" class="inputSubmit">确认</div><p id="inputTips">帐号或密码错误，请重新输入</p>
+	</div>
+	<div id="inputSelect" class="smooth"></div>
+	<div id="inputFocus" class="smooth"></div>
+
+</div>
+
+
+<!-- focus框 -->
+<div id="content_focus" class="smooth" style="position:absolute; top:0px; left:0px; width:396px; height:396px; z-index:5;display:none;">
+	<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="100" height="100" style="background:url(images/focus_lt.png); background-repeat:no-repeat;"></td>
+			<td style="background:url(images/focus_t.png);background-repeat:repeat-x;"></td>
+			<td width="100" style="background:url(images/focus_rt.png);background-repeat:no-repeat;"></td>
+		</tr>
+		<tr>
+			<td style="background:url(images/focus_l.png);background-repeat:repeat-y;"></td>
+			<td>&nbsp;</td>
+			<td style="background:url(images/focus_r.png);background-repeat:repeat-y;"></td>
+	
+		</tr>
+		<tr>
+			<td width="100" height="100" style="background:url(images/focus_lb.png);background-repeat:no-repeat;"></td>
+			<td style="background:url(images/focus_b.png);background-repeat:repeat-x;"></td>
+			<td style="background:url(images/focus_rb.png);background-repeat:no-repeat;"></td>
+		</tr>
+	</table>
+</div>
+
+</body>
+<script type="text/javascript" src="js/keyEvent.js"></script>
+<script type="text/javascript" src="js/lib.js"></script>
+<script type="text/javascript" src="js/param.js"></script>
+<script type="text/javascript" src="js/showList.js"></script>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/showTips.js"></script>
+ <script type="text/javascript" src="js/addUser.js"></script> 
+<script>
+	
+
+</script>
+</html>
